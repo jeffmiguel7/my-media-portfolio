@@ -4,22 +4,25 @@ import { ThemeContext } from "./contexts/ThemeStore";
 
 const themes = {
   dark: {
-    background: "#18191c",
+    background: "#242020",
     title: "#6495ed",
-    text: "#fff",
+    text: "#e8b1ac",
   },
   light: {
-    background: "#fff",
+    background: "#fffcfa",
     title: "#ff6347",
-    text: "#18191c",
+    text: "#1c1f19",
   },
 };
 
 const GlobalStyles = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');  
+    
     body {
         margin:0;
         padding:0;
         transition: all 0.5s;
+        font-family: 'Playfair Display', serif;
         background-color: ${(props) => props.theme.background};
     }
 `;

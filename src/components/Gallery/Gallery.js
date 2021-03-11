@@ -9,17 +9,14 @@ import {
   FilterLabel,
   DarkFilterInput,
   DarkFilterLabel,
-  CardFigure,
-  CardImg,
 } from "./GalleryStyles";
 import { ThemeContext } from "../../contexts/ThemeStore";
+import Cards from "./../Cards/Cards";
 
 const mainImages = [
   {
-    author: "The Lazy Artist Gallery",
-    tag: "People",
     src:
-      "https://github.com/OlgaKoplik/CodePen/blob/master/filterGallery/1.jpg?raw=true",
+      "https://drive.google.com/uc?export=view&id=1WrysAfbSG533-MeKBx_dx0wZja6DUCn5",
   },
   {
     author: "Daria Shevtsova",
@@ -123,18 +120,6 @@ const FilterBtns = ({ onClickAll, all, onClick, filters }) => {
   );
 };
 
-const Cards = ({ imgs }) => (
-  <FilterUl>
-    {imgs.map((img, i) => (
-      <FilterLi key={i}>
-        <CardFigure>
-          <CardImg src={img.src} alt={img.author} />
-        </CardFigure>
-      </FilterLi>
-    ))}
-  </FilterUl>
-);
-
 const Gallery = () => {
   const [images, setImages] = useState(mainImages);
   const [filters, setFilters] = useState(mainFilters);
@@ -186,7 +171,7 @@ const Gallery = () => {
 
   return (
     <StyledContainer>
-      <Title>Photo Gallery</Title>
+      <Title>PHOTO GALLERY</Title>
       <FilterBtns
         onClickAll={setForAll}
         all={all}

@@ -113,7 +113,7 @@ const CardFigure = styled.figure`
 
 const CardImg = styled.img`
   width: 300px;
-  height: 250px;
+  height: 100%;
   left: 0;
   object-fit: cover;
   border-radius: 20px;

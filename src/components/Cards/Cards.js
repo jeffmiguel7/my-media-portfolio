@@ -1,18 +1,12 @@
-import React, { useState, useContext } from "react";
-import { FilterUl, FilterLi } from "./../Gallery/GalleryStyles";
-import { CardFigure, CardImg } from "./CardsStyles";
-import { ThemeContext } from "../../contexts/ThemeStore";
+import React from "react";
+import { CardImg, CardDiv } from "./CardsStyles";
 
 const Cards = ({ imgs }) => (
-  <FilterUl>
+  <CardDiv>
     {imgs.map((img, i) => (
-      <FilterLi key={i}>
-        <CardFigure>
-          <CardImg src={img.src} alt={img.author} />
-        </CardFigure>
-      </FilterLi>
+      <CardImg key={i} src={img.src} alt={img.author} />
     ))}
-  </FilterUl>
+  </CardDiv>
 );
 
 export default Cards;

@@ -1,24 +1,46 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
-const show = keyframes`
-0% {opacity: 0;}
-100% {opacity: 1;}
-`;
+const CardDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 70vw;
+  max-height: 500vh;
+  align-content: center;
+  margin-top: 2vw;
+  transition: opacity 0.4s ease-in-out;
 
-const CardFigure = styled.figure`
-  z-index: 1;
-  min-width: 300px;
-  overflow: hidden;
-  margin: 0 5px;
-  animation: ${show} 0.8s ease;
+  &:hover img {
+    opacity: 0.4;
+  }
+
+  &:hover img:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    height: 100vw;
+    align-content: inherit;
+    max-height: 800px;
+    justify-content: center;
+  }
 `;
 
 const CardImg = styled.img`
-  width: 300px;
-  height: 100%;
-  left: 0;
-  object-fit: cover;
-  border-radius: 20px;
+  width: 15%;
+  margin: 20px;
+  border-radius: 15px;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
-export { CardFigure, CardImg };
+export { CardImg, CardDiv };

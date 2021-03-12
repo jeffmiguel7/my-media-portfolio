@@ -4,11 +4,13 @@ import { ThemeContext } from "./contexts/ThemeStore";
 
 const themes = {
   dark: {
+    themeName: "dark",
     background: "#242020",
     title: "#6495ed",
     text: "#e8b1ac",
   },
   light: {
+    themeName: "light",
     background: "#fffcfa",
     title: "#ff6347",
     text: "#1c1f19",
@@ -16,19 +18,14 @@ const themes = {
 };
 
 const GlobalStyles = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');  
-    
-    body {
-        margin:0;
-        padding:0;
-        transition: all 0.5s;
-        font-family: 'Playfair Display', serif;
-        background-color: ${(props) => props.theme.background};
-        overflow-y: scroll;
-    }
+  body {
+      background-color: ${(props) => props.theme.background};
+      overflow-y: scroll;
+  }
 `;
 const Theme = ({ children }) => {
   const { theme } = useContext(ThemeContext);
+
   return (
     <ThemeProvider theme={themes[theme]}>
       <GlobalStyles />

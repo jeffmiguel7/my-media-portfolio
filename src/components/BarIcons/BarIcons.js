@@ -9,6 +9,7 @@ import {
   StyledLightVideos,
   StyledDarkVideos,
 } from "./BarIconsStyles";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const InstaIcon = ({ size, onClick }) => {
   const { theme } = useContext(ThemeContext);
@@ -16,9 +17,13 @@ const InstaIcon = ({ size, onClick }) => {
   return (
     <>
       {theme === "dark" ? (
-        <StyledDarkInsta size={size} onClick={onClick} />
+        <Tooltip title="Instagram" placement="bottom">
+          <StyledDarkInsta size={size} onClick={onClick} />
+        </Tooltip>
       ) : (
-        <StyledLightInsta size={size} onClick={onClick} />
+        <Tooltip title="Instagram" placement="bottom">
+          <StyledLightInsta size={size} onClick={onClick} />
+        </Tooltip>
       )}
     </>
   );
@@ -30,13 +35,17 @@ const PhotoIcon = ({ size }) => {
   return (
     <>
       {theme === "dark" ? (
-        <StyledLink to="/">
-          <StyledDarkPhotos size={size} />
-        </StyledLink>
+        <Tooltip title="Photography" placement="bottom">
+          <StyledLink to="/">
+            <StyledDarkPhotos size={size} />
+          </StyledLink>
+        </Tooltip>
       ) : (
-        <StyledLink to="/">
-          <StyledLightPhotos size={size} />
-        </StyledLink>
+        <Tooltip title="Photography" placement="bottom">
+          <StyledLink to="/">
+            <StyledLightPhotos size={size} />
+          </StyledLink>
+        </Tooltip>
       )}
     </>
   );
@@ -48,13 +57,17 @@ const VideoIcon = ({ size }) => {
   return (
     <>
       {theme === "dark" ? (
-        <StyledLink to="/videos">
-          <StyledDarkVideos size={size} />
-        </StyledLink>
+        <Tooltip title="Videography" placement="bottom">
+          <StyledLink to="/videos">
+            <StyledDarkVideos size={size} />
+          </StyledLink>
+        </Tooltip>
       ) : (
-        <StyledLink to="/videos">
-          <StyledLightVideos size={size} />
-        </StyledLink>
+        <Tooltip title="Videography" placement="bottom">
+          <StyledLink to="/videos">
+            <StyledLightVideos size={size} />
+          </StyledLink>
+        </Tooltip>
       )}
     </>
   );

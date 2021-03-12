@@ -1,41 +1,33 @@
 import styled from "styled-components";
 
+const makeBorder = (theme) => {
+  if (theme.themeName === "dark") return `2px dashed #403939`;
+};
+
+const makeShadow = (theme) => {
+  if (theme.themeName === "dark") return `5px 20px 35px #00000060`;
+};
+
 const VideoDiv = styled.div`
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  height: 80vw;
-  max-height: 500vh;
-  align-content: center;
-  margin-top: 2vw;
-  transition: opacity 0.4s ease-in-out;
-
-  &:hover img {
-    opacity: 0.4;
-  }
-
-  &:hover img:hover {
-    opacity: 1;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: row;
-    height: 100vw;
-    align-content: inherit;
-    max-height: 800px;
-    justify-content: center;
-  }
+  justify-content: center;
+  list-style: none;
+  margin: 10px;
 `;
 
 const VideoFrame = styled.iframe`
-  width: 25%;
-  margin: 20px;
+  width: 40w;
+  height: 30vh;
+  border: none;
   border-radius: 15px;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  box-shadow: ${(props) => makeShadow(props.theme)};
+  border: ${(props) => makeBorder(props.theme)};
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+    transform: scale(1.02);
   }
 
   @media (max-width: 768px) {

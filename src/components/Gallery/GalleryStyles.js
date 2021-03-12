@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  background-color: ${(props) => props.theme.background};
   width: 60vw;
-  transition: all 0.5s;
+
   @media (max-width: 768px) {
     width: 100vw;
   }
@@ -14,6 +13,11 @@ const Title = styled.h1`
   text-align: center;
   font-size: xxx-large;
   margin: 5vh 0 3vh 0;
+
+  @media (max-width: 768px) {
+    margin: 5vh 15vw 2vh 15vw;
+    font-size: 25pt;
+  }
 `;
 
 export { StyledContainer, Title };

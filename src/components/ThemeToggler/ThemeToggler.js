@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { Moon } from "styled-icons/heroicons-solid";
 import { Sunny } from "styled-icons/ionicons-solid";
 import { ThemeContext } from "../../contexts/ThemeStore";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const icon = css`
   color: ${(props) => props.theme.text};
@@ -40,9 +41,13 @@ const ThemeToggler = () => {
   return (
     <>
       {theme === "dark" ? (
-        <StyledSun size={28} onClick={() => toggleTheme("light")} />
+        <Tooltip title="Light Mode" placement="bottom">
+          <StyledSun size={28} onClick={() => toggleTheme("light")} />
+        </Tooltip>
       ) : (
-        <StyledMoon size={28} onClick={() => toggleTheme("dark")} />
+        <Tooltip title="Dark Mode" placement="bottom">
+          <StyledMoon size={28} onClick={() => toggleTheme("dark")} />
+        </Tooltip>
       )}
     </>
   );

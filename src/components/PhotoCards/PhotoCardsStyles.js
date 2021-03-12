@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const CardDiv = styled.div`
   display: flex;
@@ -27,12 +27,17 @@ const CardDiv = styled.div`
   }
 `;
 
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}`;
+
 const CardImg = styled.img`
   width: 25%;
   margin: 20px;
   border-radius: 15px;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-
+  animation: ${fadeIn} 1s;
   &:hover {
     transform: scale(1.1);
     cursor: pointer;

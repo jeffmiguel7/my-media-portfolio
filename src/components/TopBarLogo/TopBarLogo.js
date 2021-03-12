@@ -3,12 +3,15 @@ import { ThemeContext } from "../../contexts/ThemeStore";
 import { StyledLink, StyledLogo } from "./TopBarStyles";
 import MyLogo from "../../mm/mylogo.svg";
 import MyDarkLogo from "../../mm/mylogo_dark.svg";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const LogoWrapper = ({ logo }) => {
   return (
-    <StyledLink to="/">
-      <StyledLogo src={logo} alt="Kiwi standing on oval" />
-    </StyledLink>
+    <Tooltip title="Home" placement="bottom">
+      <StyledLink to="/">
+        <StyledLogo src={logo} alt="Kiwi standing on oval" />
+      </StyledLink>
+    </Tooltip>
   );
 };
 

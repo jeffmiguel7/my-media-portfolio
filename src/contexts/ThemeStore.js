@@ -3,20 +3,13 @@ import React, { useState, useEffect } from "react";
 const ThemeContext = React.createContext();
 
 const ThemeStore = ({ children }) => {
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = (theme) => {
-    setTheme(theme);
-    setMode(theme);
-  };
-
-  const setMode = (theme) => {
-    window.localStorage.setItem("theme", theme);
-    setTheme(theme);
+  const [theme, setTheme] = useState(global.window?.__theme || "light");
+  const toggleTheme = () => {
+    global.window.__setPreferredTheme(theme === "light" ? "dark" : "light");
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme");
-    localTheme && setTheme(localTheme);
+    global.window.__onThemeChange = setTheme;
   }, []);
 
   return (

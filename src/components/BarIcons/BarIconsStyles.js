@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import { SocialInstagram } from "styled-icons/typicons";
-import { PhotoLibrary } from "styled-icons/material";
 import { CameraMovie } from "styled-icons/boxicons-solid";
+import { Camera } from "styled-icons/foundation";
 
 const iconStyle = css`
   color: ${(props) => props.theme.text};
@@ -55,7 +55,7 @@ const photosLightHover = css`
   }
 `;
 
-const StyledLightPhotos = styled(PhotoLibrary)`
+const StyledLightPhotos = styled(Camera)`
   ${iconStyle}
   ${photosLightHover}
 `;
@@ -67,7 +67,7 @@ const photosDarkHover = css`
   }
 `;
 
-const StyledDarkPhotos = styled(PhotoLibrary)`
+const StyledDarkPhotos = styled(Camera)`
   ${iconStyle}
   ${photosDarkHover}
 `;

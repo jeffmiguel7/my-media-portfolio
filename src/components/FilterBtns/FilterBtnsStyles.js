@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const FilterForm = styled.form`
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   padding: 0 0 10px 0;
@@ -20,7 +21,13 @@ const FilterUl = styled.ul`
 
 const FilterLi = styled.li`
   margin: 20px 10px 0 10px;
+  transition: transform 0.3s ease-in-out;
   -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   @media (max-width: 768px) {
     padding: 0 0 35px 0;
   }

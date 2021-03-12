@@ -1,44 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import ThemeToggler from "../ThemeToggler/ThemeToggler";
 import { InstaIcon, PhotoIcon, VideoIcon } from "../BarIcons/BarIcons";
 import TopBarLogo from "../TopBarLogo/TopBarLogo";
-
-const NavContainer = styled.nav`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: "100%";
-  padding-top: 3vh;
-  border: 0;
-  text-decoration: none;
-  background-color: ${(props) => props.theme.background};
-  transition: all 0.5s;
-`;
-
-const RightSideNav = styled.div`
-  display: flex;
-  padding-right: 20vw;
-  flex-direction: row;
-
-  @media (max-width: 768px) {
-    flex-direction: row;
-    padding-right: 7vw;
-  }
-`;
-
-const LeftSideNav = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  padding-left: 20vw;
-
-  @media (max-width: 768px) {
-    flex-direction: row;
-    padding-left: 2vw;
-  }
-`;
+import { NavContainer, RightSideNav, LeftSideNav } from "./TopBarStyles";
 
 const TopBar = () => {
   return (
@@ -47,8 +11,8 @@ const TopBar = () => {
         <TopBarLogo />
       </LeftSideNav>
       <RightSideNav>
-        <VideoIcon size={29} />
         <PhotoIcon size={29} />
+        <VideoIcon size={29} />
         <InstaIcon
           size={29}
           onClick={() =>

@@ -19,7 +19,7 @@ const FilterBtns = ({ onClickAll, all, onClick, filters }) => {
           <FilterUl>
             <FilterLi onClick={onClickAll}>
               <DarkFilterInput type="checkbox" checked={all} />
-              <DarkFilterLabel htmlFor="all">All</DarkFilterLabel>
+              <DarkFilterLabel htmlFor="all">all</DarkFilterLabel>
             </FilterLi>
 
             {filters.map((filter, i) => (
@@ -41,7 +41,7 @@ const FilterBtns = ({ onClickAll, all, onClick, filters }) => {
           <FilterUl>
             <FilterLi onClick={onClickAll}>
               <FilterInput type="checkbox" checked={all} />
-              <FilterLabel htmlFor="all">All</FilterLabel>
+              <FilterLabel htmlFor="all">all</FilterLabel>
             </FilterLi>
 
             {filters.map((filter, i) => (

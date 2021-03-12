@@ -4,7 +4,7 @@ const CardDiv = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 70vw;
+  height: 80vw;
   max-height: 500vh;
   align-content: center;
   margin-top: 2vw;
@@ -28,7 +28,7 @@ const CardDiv = styled.div`
 `;
 
 const CardImg = styled.img`
-  width: 15%;
+  width: 25%;
   margin: 20px;
   border-radius: 15px;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;

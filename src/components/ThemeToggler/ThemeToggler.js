@@ -11,7 +11,6 @@ const icon = css`
 `;
 
 const sunHover = css`
-  color: #c8ccdb;
   &:hover {
     transform: scale(1.1);
     color: #ffbf00;

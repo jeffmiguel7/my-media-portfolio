@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ThemeToggler from "../ThemeToggler/ThemeToggler";
-import BarIcon from "../BarIcon/BarIcon";
+import { InstaIcon, PhotoIcon, VideoIcon } from "../BarIcons/BarIcons";
 import TopBarLogo from "../TopBarLogo/TopBarLogo";
 
 const NavContainer = styled.nav`
@@ -47,7 +47,9 @@ const TopBar = () => {
         <TopBarLogo />
       </LeftSideNav>
       <RightSideNav>
-        <BarIcon
+        <VideoIcon size={29} />
+        <PhotoIcon size={29} />
+        <InstaIcon
           size={29}
           onClick={() =>
             window.open(

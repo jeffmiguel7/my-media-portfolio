@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   background-color: ${(props) => props.theme.background};
-  width: 100vw;
+  width: 60vw;
   transition: all 0.5s;
   @media (max-width: 768px) {
     width: 100vw;

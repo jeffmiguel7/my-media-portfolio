@@ -1,26 +1,17 @@
 import React from "react";
-import TopBar from "./components/TopBar/TopBar";
-import { ThemeStore } from "./contexts/ThemeStore";
-import Theme from "./Theme";
-import styled from "styled-components";
-import Gallery from "./components/Gallery/Gallery";
-
-const GalleryContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PhotosPage from "./pages/PhotosPage/PhotosPage";
+import VideosPage from "./pages/VideosPage/VideosPage";
 
 const App = () => {
   return (
     <>
-      <ThemeStore>
-        <Theme>
-          <TopBar />
-          <GalleryContainer>
-            <Gallery />
-          </GalleryContainer>
-        </Theme>
-      </ThemeStore>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={PhotosPage} />
+          <Route path="/videos" component={VideosPage} />
+        </Switch>
+      </Router>
     </>
   );
 };

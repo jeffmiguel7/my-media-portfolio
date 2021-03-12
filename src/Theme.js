@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
         transition: all 0.5s;
         font-family: 'Playfair Display', serif;
         background-color: ${(props) => props.theme.background};
+        overflow-y: scroll;
     }
 `;
 const Theme = ({ children }) => {

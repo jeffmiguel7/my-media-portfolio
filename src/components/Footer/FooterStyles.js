@@ -4,6 +4,12 @@ const getHeight = () => {
   return window.innerHeight;
 };
 
+const checkVideoRoute = () => {
+  const urlArr = window.location.href.split("/");
+  const lastWord = urlArr[urlArr.length - 1];
+  return lastWord === "videos" ? "25" : "0";
+};
+
 const FooterContainer = styled.nav`
   align-items: center;
   display: flex;
@@ -13,9 +19,9 @@ const FooterContainer = styled.nav`
   border: 0;
   text-decoration: none;
   font-size: 10.5pt;
-
   color: ${(props) => props.theme.text};
   margin-bottom: 5vh;
+  margin-top: ${checkVideoRoute}vh;
 
   @media (max-width: 768px) {
     z-index: 1;

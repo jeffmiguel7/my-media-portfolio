@@ -20,9 +20,9 @@ const TopBarLogo = () => {
   return (
     <>
       {theme === "dark" ? (
-        <LogoWrapper logo={MyLogo} alt="Kiwi standing on oval" />
+        <LogoWrapper logo={MyLogo} alt="JN Logo" />
       ) : (
-        <LogoWrapper logo={MyDarkLogo} alt="Kiwi standing on oval" />
+        <LogoWrapper logo={MyDarkLogo} alt="JN Logo" />
       )}
     </>
   );

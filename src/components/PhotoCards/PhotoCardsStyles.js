@@ -32,9 +32,7 @@ const CardDiv = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: row;
-    height: 100vw;
     align-content: inherit;
-    max-height: 800px;
     justify-content: center;
     padding: 0;
   }
@@ -58,6 +56,9 @@ const CardImg = styled.img`
 
   @media (max-width: 768px) {
     width: 80%;
+    &:last-child {
+      padding-bottom: 40px;
+    }
   }
 `;
 

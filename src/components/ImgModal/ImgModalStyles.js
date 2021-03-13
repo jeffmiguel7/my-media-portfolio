@@ -26,7 +26,6 @@ const StyledModal = styled(Modal)`
   @media (max-width: 1500px) {
     padding-top: 400vh;
     & > div {
-      padding-right: 25vw;
       overflow: hidden;
     }
   }

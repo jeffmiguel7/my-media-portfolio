@@ -4,6 +4,7 @@ import { ThemeStore } from "../../contexts/ThemeStore";
 import Theme from "../../Theme";
 import PhotosGallery from "../../components/PhotosGallery/PhotosGallery";
 import { Container } from "../MainStyles";
+import Footer from "../../components/Footer/Footer";
 
 const PhotosPage = () => {
   return (

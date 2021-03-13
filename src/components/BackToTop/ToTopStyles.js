@@ -33,8 +33,9 @@ const ToTopLink = styled.a`
     color: ${(props) => props.theme.background};
     border-radius: 5px;
     padding: 10px 10px 0 10px;
-    margin: 53vh 0 0 73vw;
+    margin: 50vh 0 0 75vw;
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
   }
 `;
 

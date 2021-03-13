@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeStore";
-import { StyledLink, StyledLogo } from "./TopBarStyles";
+import { StyledLink, StyledLogo } from "./TopBarLogoStyles";
 import MyLogo from "../../mm/mylogo.svg";
 import MyDarkLogo from "../../mm/mylogo_dark.svg";
 import Tooltip from "@material-ui/core/Tooltip";

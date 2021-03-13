@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 const FilterForm = styled.form`
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 1px;
   display: flex;
   justify-content: center;
-  padding: 0 0 10px 0;
+  padding: 0 0 0 0;
   @media (max-width: 768px) {
     margin: 0;
     padding: 20px 0 0 0;
@@ -26,6 +28,10 @@ const FilterLi = styled.li`
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media (max-width: 1500px) {
+    padding: 0 0 35px 0;
   }
 
   @media (max-width: 768px) {
@@ -65,7 +71,7 @@ const DarkFilterInput = styled.input`
   display: none;
 
   &:checked ~ label {
-    background: #aae3ca;
+    color: ${(props) => props.theme.text};
     padding: 15px 25px;
     border-radius: 50px;
     box-shadow: 5px 10px 15px #000;
@@ -73,15 +79,15 @@ const DarkFilterInput = styled.input`
       linear,
       left bottom,
       left top,
-      color-stop(0, rgb(130, 179, 153)),
-      color-stop(1, rgb(159, 201, 179))
+      color-stop(0, rgb(128, 73, 46)),
+      color-stop(1, rgb(153, 92, 63))
     );
   }
 `;
 
 const DarkFilterLabel = styled.label`
-  background: #ffc8c2;
-  color: #18191c;
+  background: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.background};
   font-weight: 700;
   padding: 15px 20px;
   border-radius: 50px;

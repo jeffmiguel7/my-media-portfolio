@@ -10,8 +10,12 @@ const iconStyle = css`
   padding-right: 1vw;
   cursor: pointer;
 
+  @media (max-width: 1500px) {
+    padding-right: 2vw;
+  }
+
   @media (max-width: 768px) {
-    padding-right: 5vw;
+    padding-right: 8vw;
     &:focus {
       -webkit-tap-highlight-color: transparent;
     }

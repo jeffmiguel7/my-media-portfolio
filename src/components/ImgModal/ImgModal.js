@@ -1,15 +1,15 @@
 import React from "react";
-import { Image, ModalStyle } from "./ImgModalStyles";
+import { Image, StyledModal } from "./ImgModalStyles";
 import "react-modal-overlay/dist/index.css";
 
-export default function ImgModal({ isOpen, setIsOpen, src }) {
+export default function ImgModal({ isOpen, setIsOpen, src, dimensions }) {
   return (
-    <ModalStyle
+    <StyledModal
       show={isOpen}
       closeModal={() => setIsOpen(false)}
-      className="modal"
+      dimensions={dimensions}
     >
-      <Image src={src} />
-    </ModalStyle>
+      <Image src={src} dimensions={dimensions} />
+    </StyledModal>
   );
 }

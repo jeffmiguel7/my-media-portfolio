@@ -18,16 +18,11 @@ const StyledLink = styled(Link)`
 const StyledLogo = styled.img`
   height: 100%;
   width: 100%;
-  opacity: 85%;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.2);
-  }
-
-  @media (max-width: 768px) {
-    padding-left: 7vw;
   }
 `;
 

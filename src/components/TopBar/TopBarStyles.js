@@ -9,6 +9,11 @@ const NavContainer = styled.nav`
   padding-top: 3vh;
   border: 0;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 `;
 
 const RightSideNav = styled.div`
@@ -16,9 +21,13 @@ const RightSideNav = styled.div`
   padding-right: 20vw;
   flex-direction: row;
 
+  @media (max-width: 1500px) {
+    padding-right: 7vw;
+  }
+
   @media (max-width: 768px) {
     flex-direction: row;
-    padding-right: 7vw;
+    padding-left: 10vw;
   }
 `;
 
@@ -28,9 +37,14 @@ const LeftSideNav = styled.div`
   justify-content: start;
   padding-left: 20vw;
 
+  @media (max-width: 1500px) {
+    padding-left: 10vw;
+  }
+
   @media (max-width: 768px) {
     flex-direction: row;
-    padding-left: 2vw;
+    margin-top: -15px;
+    padding: 0 0 15px 0;
   }
 `;
 

@@ -6,7 +6,7 @@ import { NavContainer, RightSideNav, LeftSideNav } from "./TopBarStyles";
 
 const TopBar = () => {
   return (
-    <NavContainer>
+    <NavContainer id="top">
       <LeftSideNav>
         <TopBarLogo />
       </LeftSideNav>

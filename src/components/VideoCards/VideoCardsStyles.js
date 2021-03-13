@@ -10,24 +10,24 @@ const makeShadow = (theme) => {
 
 const VideoDiv = styled.div`
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  margin: 10px;
 `;
 
 const VideoFrame = styled.iframe`
-  width: 40w;
-  height: 30vh;
+  width: 25vw;
+  height: 40vh;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: ${(props) => makeShadow(props.theme)};
   border: ${(props) => makeBorder(props.theme)};
-  margin: 20px;
-  transition: transform 0.3s ease-in-out;
+  margin: 15px;
 
-  &:hover {
-    transform: scale(1.02);
+  @media (max-width: 1500px) {
+    width: 30vw;
+    height: 30vh;
   }
 
   @media (max-width: 768px) {

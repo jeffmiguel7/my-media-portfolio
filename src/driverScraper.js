@@ -39,10 +39,8 @@ const getFolderData = async (html, tag) => {
   const $ = cheerio.load(html);
   $("div[data-id]").each((i, elem) => {
     let src = "https://drive.google.com/uc?export=view&id=";
-    const titleArr = $(elem).text().split(" ");
 
     data.push({
-      longerSide: titleArr[0] === "tall" ? "height" : "width",
       tag,
       src: (src += $(elem).attr("data-id")),
     });

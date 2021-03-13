@@ -5,9 +5,9 @@ import { ThemeContext } from "./contexts/ThemeStore";
 const themes = {
   dark: {
     themeName: "dark",
-    background: "#242020",
+    background: "#202024",
     title: "#6495ed",
-    text: "#e8b1ac",
+    text: "#e3caaa",
   },
   light: {
     themeName: "light",
@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
   body {
       background-color: ${(props) => props.theme.background};
       overflow-y: scroll;
+      scroll-behavior: smooth;
   }
 `;
 const Theme = ({ children }) => {

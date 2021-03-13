@@ -4,10 +4,14 @@ const CardDiv = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 80vw;
+  height: ${(props) => {
+    const count = props.imgCount;
+    return (count * 6).toString();
+  }}vw;
   max-height: 500vh;
   align-content: center;
   margin-top: 2vw;
+  padding: 0 120px 0 120px;
   transition: opacity 0.4s ease-in-out;
 
   &:hover img {
@@ -18,12 +22,21 @@ const CardDiv = styled.div`
     opacity: 1;
   }
 
+  @media (max-width: 1500px) {
+    height: ${(props) => {
+      const count = props.imgCount;
+      return (count * 7).toString();
+    }}vw;
+    padding: 0 30px 0 30px;
+  }
+
   @media (max-width: 768px) {
     flex-direction: row;
     height: 100vw;
     align-content: inherit;
     max-height: 800px;
     justify-content: center;
+    padding: 0;
   }
 `;
 
@@ -48,4 +61,16 @@ const CardImg = styled.img`
   }
 `;
 
-export { CardImg, CardDiv };
+const ConstructionZone = styled.p`
+  color: ${(props) => props.theme.text};
+  text-align: center;
+  margin-top: 150px;
+  font-size: 23pt;
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    font-size: 15pt;
+  }
+`;
+
+export { CardImg, CardDiv, ConstructionZone };

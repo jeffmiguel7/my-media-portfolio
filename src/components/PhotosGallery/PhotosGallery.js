@@ -20,16 +20,16 @@ const PhotosGallery = () => {
   const [filters, setFilters] = useState(mainFilters);
   const [all, setAll] = useState(true);
 
-  const setFilter = (e) => {
+  const setFilter = async (e) => {
     e.preventDefault();
     const { index } = e.currentTarget.dataset;
     filters[index].status = !filters[index].status;
     setFilters(filters);
-    updateFilters();
-    updateImages();
+    await updateFilters();
+    await updateImages();
   };
 
-  const setForAll = () => {
+  const setForAll = async () => {
     setAll(true);
     filters.forEach((filter) => {
       filter.status = false;
@@ -38,18 +38,18 @@ const PhotosGallery = () => {
     setFilters([...filters]);
   };
 
-  const updateFilters = () => {
+  const updateFilters = async () => {
     const allFiltersTrue = filters.every((filter) => filter.status === true);
     const allFiltersFalse = filters.every((filter) => filter.status === false);
 
     if (allFiltersTrue || allFiltersFalse) {
-      setForAll();
+      await setForAll();
     } else {
       setAll(false);
     }
   };
 
-  const updateImages = () => {
+  const updateImages = async () => {
     let newImages = [];
     let a = 0;
 

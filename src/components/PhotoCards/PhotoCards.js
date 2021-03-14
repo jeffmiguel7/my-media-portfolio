@@ -47,7 +47,7 @@ const PhotoCards = ({ imgs, numOfFiltered }) => {
         </>
       ) : (
         <ConstructionZone>
-          This section is still under construction.
+          Oof, these will be uploaded soon. ;)
         </ConstructionZone>
       )}
     </>

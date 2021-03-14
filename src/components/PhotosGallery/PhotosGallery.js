@@ -7,7 +7,7 @@ import AllImages from "../../ListOfImages.json";
 const mainImages = AllImages;
 
 const mainFilters = [
-  { name: "couple", status: false },
+  { name: "couples", status: false },
   { name: "portrait", status: false },
   { name: "wedding", status: false },
   { name: "engagement", status: false },

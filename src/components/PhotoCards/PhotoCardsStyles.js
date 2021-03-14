@@ -34,6 +34,7 @@ const CardDiv = styled.div`
     flex-direction: row;
     align-content: inherit;
     justify-content: center;
+    align-items: flex-start; /* For Safari stretching*/
     padding: 0;
   }
 `;

@@ -19,17 +19,21 @@ const RegFooter = () => (
   </FooterContainer>
 );
 
-const MobileFooter = () => (
-  <FooterContainer>
+const MobileFooter = ({ numOfFiltered }) => (
+  <FooterContainer numOfFiltered={numOfFiltered}>
     <MidFooter>Copyright © 2021 JN Pictures | All rights Reserved</MidFooter>
   </FooterContainer>
 );
 
-const Footer = () => {
+const Footer = ({ numOfFiltered }) => {
   const isMobile = () => {
     return window.innerWidth <= 800;
   };
-  return isMobile() ? <MobileFooter /> : <RegFooter />;
+  return isMobile() ? (
+    <MobileFooter numOfFiltered={numOfFiltered} />
+  ) : (
+    <RegFooter />
+  );
 };
 
 export default Footer;

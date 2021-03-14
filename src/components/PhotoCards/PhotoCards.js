@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { CardImg, CardDiv, ConstructionZone } from "./PhotoCardsStyles";
 import ImgModal from "../ImgModal/ImgModal";
+import Footer from "../../components/Footer/Footer";
 
-const PhotoCards = ({ imgs }) => {
+const PhotoCards = ({ imgs, numOfFiltered }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currSrc, setCurrSrc] = useState("");
   const [dimensions, setDimensions] = useState({});
@@ -35,6 +36,8 @@ const PhotoCards = ({ imgs }) => {
               />
             ))}
           </CardDiv>
+
+          <Footer numOfFiltered={numOfFiltered} />
           <ImgModal
             isOpen={isOpen}
             setIsOpen={setIsOpen}

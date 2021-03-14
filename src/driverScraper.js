@@ -3,7 +3,7 @@ const cheerio = require("cheerio");
 const fs = require("fs");
 
 const urls = {
-  couple:
+  couples:
     "https://drive.google.com/drive/u/0/folders/1qPRs4x-i-upaRoqmVnVmQxYp5X9TzBl1",
   portrait:
     "https://drive.google.com/drive/u/0/folders/1lwPhJxY9is7YNLZuDSfL-0LoSR9m4fXH",

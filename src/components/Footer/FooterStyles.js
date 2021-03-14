@@ -1,16 +1,12 @@
 import styled from "styled-components";
 
-const getHeight = () => {
-  return window.innerHeight;
-};
-
 const checkVideoRoute = () => {
   const urlArr = window.location.href.split("/");
   const lastWord = urlArr[urlArr.length - 1];
   return lastWord === "videos" ? "25" : "0";
 };
 
-const FooterContainer = styled.nav`
+const FooterContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -25,10 +21,23 @@ const FooterContainer = styled.nav`
 
   @media (max-width: 768px) {
     z-index: 1;
-    margin-top: ${getHeight() * 3.6}vh;
     font-size: 8pt;
     text-align: center;
     justify-content: center;
+    margin: ${(props) => {
+        switch (true) {
+          case props.numOfFiltered < 50 && props.numOfFiltered > 25:
+            return props.numOfFiltered * 445;
+          case props.numOfFiltered < 25 && props.numOfFiltered > 10:
+            return props.numOfFiltered * 443;
+          case props.numOfFiltered < 10 && props.numOfFiltered > 0:
+            return props.numOfFiltered * 230;
+          default:
+            return props.numOfFiltered * 403;
+        }
+      }}px
+      0 -300px 0;
+    padding: 0;
   }
 `;
 
@@ -50,6 +59,10 @@ const RightFooter = styled.div`
 const MidFooter = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 const LeftFooter = styled.div`

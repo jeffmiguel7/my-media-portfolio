@@ -72,7 +72,11 @@ const PhotosGallery = () => {
         onClick={setFilter}
         filters={filters}
       />
-      {all ? <PhotoCards imgs={mainImages} /> : <PhotoCards imgs={images} />}
+      {all ? (
+        <PhotoCards imgs={mainImages} numOfFiltered={mainImages.length} />
+      ) : (
+        <PhotoCards imgs={images} numOfFiltered={images.length} />
+      )}
     </Gallery>
   );
 };

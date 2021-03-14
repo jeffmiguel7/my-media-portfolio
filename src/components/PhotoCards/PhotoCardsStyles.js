@@ -27,14 +27,13 @@ const CardDiv = styled.div`
       const count = props.imgCount;
       return (count * 7).toString();
     }}vw;
-    padding: 0 30px 0 30px;
+    padding: 0 50px 0 50px;
   }
 
   @media (max-width: 768px) {
     flex-direction: row;
     align-content: inherit;
     justify-content: center;
-    align-items: flex-start; /* For Safari stretching*/
     padding: 0;
   }
 `;

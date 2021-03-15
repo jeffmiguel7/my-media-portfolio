@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  width: 55vw;
+  width: 50vw;
+
+  @media (max-width: 1700px) {
+    width: 60vw;
+  }
 
   @media (max-width: 1500px) {
     width: 70vw;
